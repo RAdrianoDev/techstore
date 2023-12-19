@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+
+:root {
+    --color-main-fonts:#420303;
+    --color-nav-transition: #ff0303;
+    --color-border-index-buton: #420303;
+    --color-button-hover: #ca470a;
+    --color-background-menu-mobile: #7f0909;
+    --color-background-aboutUs: #420303;
+    /* --color-font-p-curiosities:#777; */
+    /* --color-font-form: #545454; */
+    /* --color-font-aboutAF: #420303; */
+    /* --color-background-card-curiosities:#420303; */
+}
+
+* {
+    border: 15px;
+    margin: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header of the WebSite */
+.header{
+    min-height: 50vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+nav{
+    display: flex;
+    padding: 1% 6%;
+    justify-content: space-between;
+    align-items: center;
+    border: 10px;
+    margin: 10px;
+}
+
+nav img{
+    width: 100px;
+}
+
+.title {
+    text-align: center;
+    margin: 8px;
+}
+
+span {
+    font-style: italic;
+    font-size: 10px;
+}
+
+#registerForm {
+    font-size: 15px;
+}
+
+#productForm {
+    font-size: 15px;
+}
+
+#registerForm input {
+    border: 1px solid var(--color-border-index-buton);
+    border-radius: 3px;
+    margin: 2px;
+}
+
+#productForm input {
+    border: 1px solid var(--color-border-index-buton);
+    border-radius: 3px;
+    margin: 2px;
+}
+
+#registerForm textarea {
+    border: 1px solid var(--color-border-index-buton);
+    border-radius: 3px;
+    margin-left: 20px;
+}
+
+#searchInput {
+    border: 1px solid var(--color-border-index-buton);
+    border-radius: 3px;
+    margin: 2px;
+}
+
+#searchButton {
+    border: 1px solid var(--color-border-index-buton);
+    border-radius: 3px;
+    margin: 2px;
+}
+
+#employeeFields {
+    margin: 5px;
+    border: 5px;
+}
+
+#registerForm select {
+    border: 1px solid var(--color-border-index-buton);
+    border-radius: 3px;
+    margin: 2px;
+}
+
+.container {
+    text-align: center; /* Centraliza na horizontal */
+  }
+
+.nav_links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav_links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav_links ul li a{
+    color: var(--color-main-fonts);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav_links ul li::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: var(--color-nav-transition);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav_links ul li:hover::after{
+    width: 100%;
+}
+
+
+.accessForms-col{
+    flex-basis: 45%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    padding: 10px;
+    color: var(--color-main-fonts);
+}
+
+.accessForms-col img{
+    width: 30%;
+    border-radius: 10px;
+}
+
+.accessForms-col p{
+    font-weight: 500;
+    text-align: center;
+    color: var(--color-main-fonts);
+}
+
+.accessForms-col h3{
+    margin-top: 16px;
+    justify-content: space-around;
+}
+
+.accessForms-form{
+    padding: 20px;
+}
+
+#login{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url(../images/AF_access_login.jpg);
+    background-position: top;
+    background-size: cover;
+}
+
+#signUp{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.2)), url(../images/AF_access_signup.jpg);
+    background-position: top;
+    background-size: cover;
+}
+
+@media(max-width: 700px){
+    .disclaimer ol{
+        columns: 1;
+        padding: 5px;
+    }
+}
+
+/* <!-- Newsletter --> */
+.newsletter{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.2)), url(../images/AF_home_newsletter.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.newsletter h1, label{
+    color: var(--color-main-fonts);
+    margin-bottom: 40px;
+    padding: 0;
+}

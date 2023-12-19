@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechStore - Record Agents</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+
+  <h1 class="title">Record Agents</h1>
+
+  <nav>
+    <div class="nav_links" id="navLinks">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recordAgent.html">Record Agents</a></li>
+        <li><a href="searchAgent.html">Search Agents</a></li>
+        <li><a href="recordProduct.html">Record Products</a></li>
+        <li><a href="searchProduct.html">Search Products</a></li>
+      </ul>
+    </div>
+    <br />
+    <a href="index.html"><img src="//" alt="" /></a>
+  </nav>
+
+
+  <!-- Record Form -->
+  <h2>Record The Agent</h2>
+  <form id="registerForm">
+    <label for="registerFirstName">First Name:</label>
+    <input type="text" id="registerFirstName" name="registerFirstName" required /><br /><br />
+
+    <label for="registerLastName">Last Name:</label>
+    <input type="text" id="registerLastName" name="registerLastName" required /><br /><br />
+
+    <label for="registerEmail">Email:</label>
+    <input type="email" id="registerEmail" name="registerEmail" required /><br /><br />
+
+    <!--PASSWORD:
+      minimum 6 characters with letters, numbers and special characters
+      In this code, the pattern attribute contains the regular expression ^(?=.*[a-zA-Z])(?=.*\d)(?=.*[\W_]).{6,}$, which imposes the following rules:
+      ^: Start of string.
+      (?=.*[a-zA-Z]): Must contain at least one letter (upper or lower case).
+      (?=.*\d): Must contain at least one digit.
+      (?=.*[\W_]): Must contain at least one special (non-alphanumeric) character.
+      .{6,}: The password must have at least 6 characters of any type.
+      $: End of string. -->
+    <label for="registerPassword">Password:</label>
+    <input type="password" id="registerPassword" name="registerPassword"
+      pattern="^(?=.*[a-zA-Z])(?=.*\d)(?=.*[\W_]).{6,}$" required /><br /><span class="password-requirements">Minimum 6
+      characters with letters, numbers and special characters.</span><br /><br>
+
+    <label for="confirmPassword">Retype passoword:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required /><br /><br />
+
+    <label for="userType">User Type:</label>
+    <select id="userType" name="userType" required>
+      <option value=""></option>
+      <option value="customer">Customer</option>
+      <option value="vendor">Vendor</option>
+      <option value="visitor">Visitor</option>
+      <option value="employee">Employee</option>
+    </select><br /><br />
+
+    <div id="employeeFields" style="display: none">
+      <label for="employeeRole">Role:</label>
+      <select id="employeeRole" name="employeeRole">
+        <option value=""></option>
+        <option value="sales">Sales</option>
+        <option value="management">Management</option>
+        <option value="other">Other</option>
+      </select><br /><br />
+    </div>
+
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="text" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10,12}" /><br /><br />
+
+    <label for="countryCode">Country Code:</label>
+    <input type="text" id="countryCode" name="countryCode" pattern="^\d{1,3}$" maxlength="3" /><br />
+    <span class="password-requirements">Enter your international telephone code (numbers only).</span><br /><br>
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" /><br /><br />
+
+    <label for="zipcode">ZipCode:</label>
+    <input type="text" id="zipcode" name="zipcode" pattern="[A-Za-z0-9]{6}" maxlength="6" /><br /><br />
+
+    <label for="observations">Observations:</label><br>
+    <textarea id="observations" name="observations"></textarea><br />
+
+    <input type="submit" id="submitButton" value="Record" />
+  </form>
+
+  <script src="script/recordAgent.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechStore - Record Products</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <h1 class="title">Record Products</h1>
+
+    <nav>
+        <div class="nav_links" id="navLinks">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recordAgent.html">Record Agents</a></li>
+                <li><a href="searchAgent.html">Search Agents</a></li>
+                <li><a href="recordProduct.html">Record Products</a></li>
+                <li><a href="searchProduct.html">Search Products</a></li>
+            </ul>
+        </div>
+        <br />
+        <a href="index.html"><img src="//" alt="" /></a>
+    </nav>
+
+    <div class="container">
+        <h1 class="title">Record Products</h1>
+    </div>
+
+    <form id="productForm">
+        <label for="productCode">Product Code:</label>
+        <input type="text" id="productCode" name="productCode" pattern="[A-Za-z0-9]{6}" maxlength="6" required><br><span class="password-requirements">6 characters</span><br /><br>
+
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" required><br><br>
+
+        <input type="submit" value="Record">
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script/recordProducts.js"></script>
+</body>
+
+</html>
